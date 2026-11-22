@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Thời khóa biểu HK2 2026–2027</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f3f5f8;--surface:#fff;--ink:#14213d;--mute:#5d6b82;--line:#dfe4ec;--accent:#1f4fd8;--am:#fff7e6;--amh:#9a6200;--ev:#eef1ff;--evh:#2f3f9e;
+--cs:42%;--cl:94%;--ct:28%;--off:#eceff4;--offt:#6b778c;--exb:#fff1f1;--exh:#b42318;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);color-scheme:light}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f1520;--surface:#18202e;--ink:#e8edf6;--mute:#9aa8bf;--line:#2b3649;--accent:#7ea2ff;--am:#2a2314;--amh:#f0c36a;--ev:#1c2340;--evh:#a9b7ff;--cs:35%;--cl:21%;--ct:82%;--off:#1d2634;--offt:#8b98ae;--exb:#2d1b1c;--exh:#ff9b94;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0f1520;--surface:#18202e;--ink:#e8edf6;--mute:#9aa8bf;--line:#2b3649;--accent:#7ea2ff;--am:#2a2314;--amh:#f0c36a;--ev:#1c2340;--evh:#a9b7ff;--cs:35%;--cl:21%;--ct:82%;--off:#1d2634;--offt:#8b98ae;--exb:#2d1b1c;--exh:#ff9b94;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.5 "Be Vietnam Pro",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:1180px;margin:0 auto;padding:20px 16px 48px}
+header{display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;align-items:flex-end;margin-bottom:18px}
+h1{font-size:26px;line-height:1.2;margin:0 0 4px;font-weight:700}
+.sub{color:var(--mute);font-size:14px;margin:0}
+.stats{display:flex;gap:10px}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 14px;text-align:center}
+.stat b{display:block;font-size:22px;line-height:1.1}
+.stat span{font-size:12px;color:var(--mute)}
+.weeks{display:flex;gap:6px;overflow-x:auto;padding:4px 2px 10px;scrollbar-width:thin}
+.wk{flex:0 0 auto;min-width:46px;padding:6px 8px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;font-size:13px;cursor:pointer;text-align:center}
+.wk small{display:block;font-size:10px;color:var(--mute)}
+.wk.on{border-color:var(--accent);box-shadow:inset 0 -3px 0 var(--accent)}
+.wk.ex{background:var(--exb)}
+.wk.dim{opacity:.6}
+.wk.sel{background:var(--accent);border-color:var(--accent);color:#fff}
+.wk.sel small{color:#e4ebff}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--mute);margin:0 2px 12px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.bar{display:flex;align-items:center;gap:10px;margin-bottom:10px}
+.bar h2{margin:0;font-size:18px;flex:1}
+.bar button,.nav{border:1px solid var(--line);background:var(--surface);color:var(--ink);border-radius:8px;padding:7px 12px;font:inherit;cursor:pointer}
+.bar button:disabled{opacity:.4;cursor:default}
+.note{background:var(--ev);color:var(--evh);border-radius:8px;padding:8px 12px;font-size:13px;margin-bottom:10px}
+.scroll{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+.grid{display:grid;grid-template-columns:78px repeat(7,minmax(128px,1fr));min-width:1000px}
+.grid>div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px}
+.grid>div:nth-child(8n){border-right:0}
+.dh{text-align:center;font-weight:600;padding:10px 6px!important}
+.dh small{display:block;font-weight:400;color:var(--mute);font-size:12px}
+.dh em{display:block;font-style:normal;font-size:11px;margin-top:3px;border-radius:6px;padding:1px 6px}
+.dh.today{box-shadow:inset 0 3px 0 var(--accent)}
+.t-off{background:var(--off);color:var(--offt)}
+.t-exam{background:var(--exb);color:var(--exh)}
+.t-info{background:var(--ev);color:var(--evh)}
+.rl{font-weight:600;font-size:13px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center}
+.rl small{font-weight:400;color:var(--mute);font-size:11px}
+.rl.s{background:var(--am);color:var(--amh)}
+.rl.c{background:var(--ev);color:var(--evh)}
+.cell{min-height:118px;display:flex;flex-direction:column;gap:6px}
+.cell.s{background:color-mix(in srgb,var(--am) 35%,transparent)}
+.cell.off{background:repeating-linear-gradient(135deg,var(--off),var(--off) 6px,transparent 6px,transparent 12px);color:var(--offt);font-size:12px;align-items:center;justify-content:center;text-align:center}
+.card{border-radius:8px;padding:7px 9px;font-size:12.5px;background:hsl(var(--h) var(--cs) var(--cl));border-left:4px solid hsl(var(--h) 62% 48%);color:hsl(var(--h) 45% var(--ct))}
+.card b{display:block;font-size:13px;line-height:1.3;margin-bottom:2px}
+.card span{display:block;opacity:.9}
+.card.ex{background:var(--surface);border:1.5px dashed hsl(var(--h) 62% 48%);border-left-width:4px}
+.tag{display:inline-block;font-size:10.5px;font-weight:600;border-radius:5px;padding:0 5px;background:hsl(var(--h) 62% 48%);color:#fff;margin-bottom:3px}
+.chip{border-radius:8px;padding:6px 9px;font-size:12px;font-weight:500}
+h3{margin:30px 0 10px;font-size:18px}
+table{width:100%;border-collapse:collapse;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;font-size:13.5px}
+th,td{text-align:left;padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top}
+th{background:var(--bg);color:var(--mute);font-weight:600;font-size:12.5px}
+tr:last-child td{border-bottom:0}
+.dot{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:6px}
+.tw{overflow-x:auto}
+.tw table{min-width:720px}
+tr.jump{cursor:pointer}
+tr.jump:hover td{background:var(--bg)}
+button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:600px){h1{font-size:21px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+ <div>
+  <h1>Thời khóa biểu học kỳ 2, năm học 2026–2027</h1>
+  <p class="sub">Khóa 42, bắt đầu Tuần 1 từ thứ Hai 15/02/2027. Chọn một tuần để xem chi tiết.</p>
+ </div>
+ <div class="stats">
+  <div class="stat"><b>9</b><span>học phần</span></div>
+  <div class="stat"><b>20</b><span>tín chỉ</span></div>
+ </div>
+</header>
+
+<div class="weeks" id="weeks" role="tablist" aria-label="Chọn tuần"></div>
+<div class="legend">
+ <span><i style="background:var(--accent)"></i>Tuần có lịch học</span>
+ <span><i style="background:var(--exb);border:1px solid var(--exh)"></i>Tuần thi</span>
+ <span><i style="background:var(--off)"></i>Nghỉ lễ</span>
+ <span><i style="border:1.5px dashed var(--mute)"></i>Thẻ nét đứt là buổi thi KTHP</span>
+</div>
+
+<div class="bar">
+ <button id="prev" aria-label="Tuần trước">‹ Trước</button>
+ <h2 id="title"></h2>
+ <button id="next" aria-label="Tuần sau">Sau ›</button>
+</div>
+<div id="note"></div>
+<div class="scroll"><div class="grid" id="grid"></div></div>
+
+<h3>Lịch thi kết thúc học phần</h3>
+<div class="tw"><table id="exams"></table></div>
+
+<h3>Danh sách học phần đã đăng ký</h3>
+<div class="tw"><table id="subs"></table></div>
+<p class="sub" style="margin-top:8px">Nhóm 12 và “Chung” là lớp dùng chung cho cả nhóm 1 và nhóm 2.</p>
+</div>
+
+<script>
+const DN=['Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7','Chủ nhật'];
+const dt=(w,d)=>new Date(2027,1,15+7*(w-1)+d-2);
+const f=x=>String(x.getDate()).padStart(2,'0')+'/'+String(x.getMonth()+1).padStart(2,'0');
+const S={
+ hc:{n:'Luật hành chính',c:'LAW308_262_D03',tc:3,h:215,g:'Nhóm 2'},
+ hs:{n:'Luật hình sự',c:'LAW309_262_D01',tc:3,h:350,g:'Nhóm 2'},
+ ds:{n:'Luật dân sự 1',c:'LAW306_262_D03',tc:3,h:28,g:'Nhóm 2'},
+ tl:{n:'Tâm lý học',c:'SOC303_262_D04',tc:2,h:150,g:'Nhóm 12 (chung)'},
+ lg:{n:'Lôgic học',c:'MLM305_262_D01',tc:2,h:265,g:'Nhóm 12 (chung)'},
+ qc:{n:'Pháp luật về quyền con người',c:'LAW727_262_D03',tc:2,h:190,g:'Nhóm 2'},
+ pb:{n:'Pickleball (GDTC 2)',c:'GYM302_262_PI_D25',tc:1,h:100,g:'Nhóm 12 (chung)'},
+ lu:{n:'Lôgic ứng dụng trong kinh doanh',c:'ITS723_262_D10',tc:2,h:320,g:'Nhóm 2'},
+ pt:{n:'Phát triển bền vững và tài chính xanh',c:'FIN730_262_D27',tc:2,h:45,g:'Nhóm 2'}
+};
+const SA='Tiết 1–5, 7h00–11h05', CH='Tiết 6–10, 13h00–17h05';
+const L=[
+ ['hc',7,1,1,'S',SA,'A307'],['hc',7,3,8,'S',SA,'A307'],['hc',6,7,8,'S',SA,'B1.405'],['hs',3,1,9,'S',SA,'B1.203'],['ds',5,1,9,'S',SA,'B1.306'],
+ ['tl',4,12,16,'S',SA,'A004'],['tl',5,13,13,'S',SA,'A103'],
+ ['lg',3,12,16,'S',SA,'A004'],['lg',5,16,16,'S',SA,'A103'],
+ ['qc',5,12,16,'C',CH,'A204'],['qc',3,15,15,'C',CH,'A202'],
+ ['pb',2,2,4,'S','Tiết 1–3, 7h00–9h15','Sân Pickleball'],['pb',2,5,7,'S','Tiết 4–5, 9h35–11h05','Sân Pickleball'],
+ ['lu',4,12,16,'C',CH,'B1.403'],['lu',2,15,15,'C',CH,'A303'],
+ ['pt',6,12,16,'C',CH,'B1.402'],['pt',2,16,16,'C',CH,'A104']
+];
+const X=[ // môn, ngày thi, ca, giờ, buổi
+ ['pb','2027-04-05','Ca 1','7h00','S'],['hs','2027-04-24','Ca 3','13h00','C'],
+ ['ds','2027-04-27','Ca S3','10h00','S'],['hc','2027-04-28','Ca 4','15h30','C'],
+ ['pt','2027-07-13','Ca 2','9h30','S'],['qc','2027-07-14','Ca 3','13h00','C'],
+ ['lg','2027-07-15','Ca S1','7h00','S'],['tl','2027-07-16','Ca S2','8h30','S'],
+ ['lu','2027-07-17','Ca 4','15h30','C']
+].map(a=>{const p=a[1].split('-'),D=new Date(+p[0],p[1]-1,+p[2]);const k=Math.round((D-new Date(2027,1,15))/864e5);return{s:a[0],D,ca:a[2],g:a[3],sl:a[4],w:Math.floor(k/7)+1,d:k%7+2}});
+const T={},E={};
+const add=(w,ds,t,x)=>ds.forEach(d=>T[w+'-'+d]={t,x});
+add(2,[7,8],'info','Sinh hoạt lớp');add(9,[6,7,8],'off','Nghỉ Giỗ Tổ');
+add(10,[3,5,6,7,8],'exam','Thi KTHP đợt 1');add(11,[2,3,4,5],'exam','Thi KTHP đợt 1');
+add(11,[6,7,8],'off','Nghỉ lễ 30/4–1/5');add(12,[2],'off','Nghỉ bù lễ');
+add(16,[7],'info','Sinh hoạt lớp');add(21,[6,7,8],'off','Nghỉ Hội nghị VC-NLĐ');
+add(22,[2,3,4,5,6,7,8],'exam','Thi KTHP đợt 2');
+E['10-4-S']='Đối thoại Nhà trường – sinh viên';E['10-4-C']='Sinh hoạt lớp';
+const NW=22;let cur=1;
+const sess=(w,d,sl)=>L.filter(a=>a[1]==d&&a[4]==sl&&w>=a[2]&&w<=a[3]);
+const has=w=>L.some(a=>w>=a[2]&&w<=a[3]);
+const isExam=w=>X.some(e=>e.w==w)||Object.keys(T).some(k=>k.startsWith(w+'-')&&T[k].t=='exam');
+function chips(){
+ const el=document.getElementById('weeks');el.innerHTML='';
+ for(let w=1;w<=NW;w++){const b=document.createElement('button');
+  b.className='wk'+(has(w)?' on':'')+(isExam(w)?' ex':'')+(!has(w)&&!isExam(w)?' dim':'')+(w==cur?' sel':'');
+  b.innerHTML='T'+w+'<small>'+f(dt(w,2))+'</small>';b.onclick=()=>go(w);b.setAttribute('role','tab');b.setAttribute('aria-selected',w==cur);el.appendChild(b);}
+ const s=el.querySelector('.sel');if(s)s.scrollIntoView({inline:'center',block:'nearest'});
+}
+function card(a,w){const s=S[a[0]];return '<div class="card" style="--h:'+s.h+'"><b>'+s.n+'</b><span>'+a[5]+'</span><span>Phòng '+a[6]+', '+s.g+'</span>'+(w==1?'<span><b style="display:inline;font-size:12px">Học online</b></span>':'')+'</div>'}
+function exCard(e){const s=S[e.s];return '<div class="card ex" style="--h:'+s.h+'"><span class="tag">Thi KTHP</span><b>'+s.n+'</b><span>'+e.ca+', '+e.g+'</span></div>'}
+function render(){
+ const w=cur,g=document.getElementById('grid');
+ document.getElementById('title').textContent='Tuần '+w+' ('+f(dt(w,2))+' – '+f(dt(w,8))+')';
+ document.getElementById('prev').disabled=w==1;document.getElementById('next').disabled=w==NW;
+ document.getElementById('note').innerHTML=w==1?'<div class="note">Tuần 1 (15/02–20/02/2027) học online. Các buổi học bên dưới diễn ra trực tuyến.</div>':'';
+ const today=new Date();let h='<div class="dh"></div>';
+ for(let d=2;d<=8;d++){const D=dt(w,d),t=T[w+'-'+d],td=D.toDateString()==today.toDateString();
+  h+='<div class="dh'+(td?' today':'')+'">'+DN[d-2]+'<small>'+f(D)+'</small>'+(t?'<em class="t-'+t.t+'">'+t.x+'</em>':'')+'</div>'}
+ [['S','s','Sáng','Tiết 1–5'],['C','c','Chiều','Tiết 6–10']].forEach(r=>{
+  h+='<div class="rl '+r[1]+'">'+r[2]+'<small>'+r[3]+'</small></div>';
+  for(let d=2;d<=8;d++){const t=T[w+'-'+d];
+   if(t&&t.t=='off'){h+='<div class="cell off">'+t.x+'</div>';continue}
+   let c='';
+   sess(w,d,r[0]).forEach(a=>c+=card(a,w));
+   X.filter(e=>e.w==w&&e.d==d&&e.sl==r[0]).forEach(e=>c+=exCard(e));
+   if(E[w+'-'+d+'-'+r[0]])c+='<div class="chip t-info">'+E[w+'-'+d+'-'+r[0]]+'</div>';
+   if(t&&t.t=='info'&&r[0]=='S')c+='<div class="chip t-info">'+t.x+' (cả ngày)</div>';
+   h+='<div class="cell '+r[1]+'">'+c+'</div>'}
+ });
+ g.innerHTML=h;chips();
+}
+function go(w){cur=Math.max(1,Math.min(NW,w));render();document.getElementById('title').scrollIntoView({block:'nearest'})}
+document.getElementById('prev').onclick=()=>go(cur-1);
+document.getElementById('next').onclick=()=>go(cur+1);
+// Bảng lịch thi
+let h='<tr><th>Học phần</th><th>Ngày thi</th><th>Ca thi</th><th>Giờ</th><th>Buổi</th></tr>';
+X.slice().sort((a,b)=>a.D-b.D).forEach(e=>{const s=S[e.s];
+ h+='<tr class="jump" data-w="'+e.w+'"><td><i class="dot" style="background:hsl('+s.h+' 62% 48%)"></i>'+s.n+'</td><td>'+DN[e.d-2]+', '+f(e.D)+'/2027</td><td>'+e.ca+'</td><td>'+e.g+'</td><td>'+(e.sl=='S'?'Sáng':'Chiều')+'</td></tr>'});
+document.getElementById('exams').innerHTML=h;
+document.querySelectorAll('tr.jump').forEach(r=>r.onclick=()=>go(+r.dataset.w));
+// Bảng học phần
+h='<tr><th>Học phần</th><th>Lớp học phần</th><th>Nhóm</th><th>TC</th><th>Lịch học</th></tr>';let tot=0;
+Object.keys(S).forEach(k=>{const s=S[k];tot+=s.tc;
+ const ls=L.filter(a=>a[0]==k).map(a=>DN[a[1]-2]+', '+(a[2]==a[3]?'tuần '+a[2]:'tuần '+a[2]+'–'+a[3])+', '+(a[4]=='S'?'sáng':'chiều')+', '+a[6]).join('<br>');
+ h+='<tr><td><i class="dot" style="background:hsl('+s.h+' 62% 48%)"></i>'+s.n+'</td><td>'+s.c+'</td><td>'+s.g+'</td><td>'+s.tc+'</td><td>'+ls+'</td></tr>'});
+h+='<tr><td><b>Tổng cộng</b></td><td></td><td></td><td><b>'+tot+'</b></td><td></td></tr>';
+document.getElementById('subs').innerHTML=h;
+render();
+</script>
+</body>
+</html>
